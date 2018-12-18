@@ -1,0 +1,638 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &116590067800814728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116590067800814734}
+  - component: {fileID: 116590067800814735}
+  m_Layer: 0
+  m_Name: SpellManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116590067800814734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116590067800814728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &116590067800814735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116590067800814728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a734d884aedaa33409ba19f5a6efbc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellLibrary:
+  - spellName: 
+    spellPrefab: {fileID: 1454864635996048, guid: 4b5fa25e00001f446baf013df98bce8c,
+      type: 3}
+    element: 5
+    baseDamage: 10
+    range: 10
+    knockBack: 1
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 0a7cf383773519444859731d443eaf9e, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1053960701893122, guid: 0684650dd5655514ea7f3df35dc70ceb,
+      type: 3}
+    element: 5
+    baseDamage: 10
+    range: 10
+    knockBack: 2
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 41bb756cbb31a7d43b49135aececc256, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1992473127755236, guid: a1fa9874b21d15742b4b1f4eee23229e,
+      type: 3}
+    element: 6
+    baseDamage: 10
+    range: 10
+    knockBack: 3
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 2a3c9caa94ad1584faa9b90dc504a2b6, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1867631085539600, guid: 1fd871c93fa27bc469e9dbb7f7d943f0,
+      type: 3}
+    element: 0
+    baseDamage: 10
+    range: 10
+    knockBack: 4
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 0a7cf383773519444859731d443eaf9e, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1535771586102566, guid: a04d6c8193911da4ab6e2875fa86304c,
+      type: 3}
+    element: 3
+    baseDamage: 10
+    range: 10
+    knockBack: 5
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: fa643726ca65e844da339bdf9f035c8c, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1679276321574454, guid: d9e6bc0f3cd450b4e81d672e1e3957e2,
+      type: 3}
+    element: 4
+    baseDamage: 10
+    range: 10
+    knockBack: 6
+    castTime: 0
+    duration: 7
+    icon: {fileID: 21300000, guid: 0a7cf383773519444859731d443eaf9e, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1042962290400280, guid: 45f134f709433794c9fd82ae5c0d5009,
+      type: 3}
+    element: 5
+    baseDamage: 10
+    range: 10
+    knockBack: 7
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 41bb756cbb31a7d43b49135aececc256, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1209946497609482, guid: 5cb609d09675a794bb859c9d81e73dad,
+      type: 3}
+    element: 6
+    baseDamage: 10
+    range: 10
+    knockBack: 8
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 0a7cf383773519444859731d443eaf9e, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1758863767508122, guid: 482d1b03634169d4b965867e2965b19c,
+      type: 3}
+    element: 0
+    baseDamage: 10
+    range: 10
+    knockBack: 9
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 2a3c9caa94ad1584faa9b90dc504a2b6, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1187350635237430, guid: 1b7805d953c022f4cbfe34f804921146,
+      type: 3}
+    element: 1
+    baseDamage: 10
+    range: 10
+    knockBack: 10
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: fa643726ca65e844da339bdf9f035c8c, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1365300289669678, guid: a8042d4ab7647144e97eaecc6a647b5f,
+      type: 3}
+    element: 2
+    baseDamage: 10
+    range: 10
+    knockBack: 11
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 0a7cf383773519444859731d443eaf9e, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1363404153839300, guid: 6fca1031e82d1264a8f6d8d1d7a7cced,
+      type: 3}
+    element: 3
+    baseDamage: 10
+    range: 10
+    knockBack: 12
+    castTime: 5
+    duration: 7
+    icon: {fileID: 21300000, guid: 41bb756cbb31a7d43b49135aececc256, type: 3}
+  - spellName: 
+    spellPrefab: {fileID: 1023447171018200, guid: 88c08069e7f114f4d892a312d3173637,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1272224181608010, guid: ba32d6ffbec06034697cddca0390ce64,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1551944013634990, guid: 3166bce09555cc0429b583454eeba874,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1090133491649096, guid: 77012f3233a4a664da462fc634f5d6b9,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1939866384944552, guid: d68316c8906cab14c8e4b4b08dd42145,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1563956951038392, guid: 52cb252e431a6e14c9255cebc97003f8,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1445715206300078, guid: e46d8632c2e0f6b488217eb71b657ba7,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1617559237192228, guid: b3a70b09f63a498438d6bd039a18d2fc,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1220922769117174, guid: 45ed8865d496c0f4db8c6eb65c917131,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1677879091523210, guid: 572c126c29075154d97a8c68e70906ae,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1821497119585818, guid: 928fe2f424770c14dbf6685d7fab25ea,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1881634734537756, guid: 5b389d585d7681948a86765d14232bdb,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1125883288892754, guid: 065fe4dbb1a1eb34a9936d42ffd74293,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1738072277953136, guid: 524fd12161a9eb144969051236351f3f,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1026045528767240, guid: 2b782abb0e6b1484bbc234bc444afa00,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1117525931979808, guid: 65e3377535a7162468c722f1fdeb12cc,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1492975212710604, guid: 0f75b20b5e3f0514fa4e75f551a92726,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1260779564003926, guid: d8cb1464cce2e034692f1cb8d74e0d85,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1279645169442658, guid: 831fc09b29bab8548a77d14121a1ffc3,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1738392185001210, guid: 58b7d86c09b9cd0449011b2c1fc9f532,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1369200880568430, guid: f38e70836064976479d8b9429351a7b2,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1748139164946814, guid: 4f14e37b24a0f9c41a81220f59ae87f6,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 103234, guid: 62b391571386ff84fa0c07bcf7516b7e, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1246638314895344, guid: fe91343b9a35bb14794086f1770004a3,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1967491460922094, guid: 8c446a74ba1e76244a5a66cb32aedc9b,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1530326935255954, guid: 3fc0a26d09ca89a4f8ef0e417730ffd2,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1520786051656894, guid: 60f067005042016479e156d2700edf0c,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1436447386774278, guid: b36e5394bf3902b41877ecba9aa55b8d,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1332835199264650, guid: 443b9d04195d337429bce8ad0bd37807,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 165172, guid: d731c9176197cd744a91c4b41e417c71, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1590966373120196, guid: ac8a539a7136cf44eb1cadc5a92698fe,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 141900, guid: 994aac8c46b05f849b78294465816eb1, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1033462822675242, guid: 43dbb3bbd1afeb24692c1d8f8b260845,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1329854505996202, guid: 449e5ef0f6ec9b040ac709ac81442974,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1563849433448384, guid: d117ff86aeaeac44b93771311a9a6540,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1835517635929670, guid: 1265a0dc69a18c0488f885f37d64c462,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1111292484735420, guid: 75a8b5dd0b15bb14284ccdcac1e3a283,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1288574436124150, guid: fdb991f1d76654a418397b60cd91acab,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1919843589960360, guid: 961f9f66d46891b498e4129d7b89b9f8,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1614648838348040, guid: 6b12f08cfea33d1429a5fb9ca7e5f9fe,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1601494591900918, guid: 61ee9554f7c3b03408fc8258477fddf5,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1634037580322548, guid: 6209dfa15219d234f9737769610fffc9,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 121928, guid: 313e5c5f850e5be429d4a6787a725f73, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 119242, guid: 4bc451a9c5656db4794e16cdecbabbac, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 1568068776922774, guid: 53f2fdb3ded27e84785b2dd1970d6357,
+      type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 190162, guid: c6342acfccda5a94bae465531baf3640, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 111372, guid: 87738b5a38cb9d34aaa6cbf49c05e518, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
+  - spellName: 
+    spellPrefab: {fileID: 167990, guid: 1915ba71ef127a84fb6bb20ebda36f1e, type: 3}
+    element: 7
+    baseDamage: 0
+    range: 0
+    knockBack: 0
+    castTime: 0
+    duration: 0
+    icon: {fileID: 0}
