@@ -9,7 +9,7 @@ public class NavMeshManager : MonoBehaviour
     void Start()
     {
         surface = gameObject.GetComponent<NavMeshSurface>();
-        //StartCoroutine("InitNavMesh");
+        StartCoroutine("InitNavMesh");
     }
 
     public void UpdateNavMesh()

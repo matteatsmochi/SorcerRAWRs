@@ -100,17 +100,29 @@ public class enemyDestinationManager : MonoBehaviour
 
     public void Knockback(float kb, Vector3 dir)
     {
-        StartCoroutine(KBWait(kb, dir));
+        StartCoroutine(KBWait(kb, transform.position, dir, 0.3f));
         
     }
 
-    IEnumerator KBWait(float kb, Vector3 dir)
+    IEnumerator KBWait(float kb, Vector3 start, Vector3 dir, float duration)
     {
         yield return new WaitForSeconds(0.2f);
+        Debug.Log(dir.ToString());
 
-            //DOTween.To(()=> agent.Move(), x=> agent.Move() = x, dir * kb, 1);
+        float journey = 0f;
+        while (journey <= duration)
+        {
+            journey = journey + Time.deltaTime;
+            float percent = Mathf.Clamp01(journey / duration);
+
+            dir = new Vector3(dir.x, transform.position.y, dir.z);
             
-            agent.Move(dir * kb);
+            transform.position = Vector3.Lerp(start, start + (dir * kb), percent);
+
+            //agent.Move(Vector3.Lerp(start, start + (dir * kb), percent));
+            
+            yield return null;
+        }
             
     }
 

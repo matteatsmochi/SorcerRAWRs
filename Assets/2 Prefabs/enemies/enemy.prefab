@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolPoints: []
-  timeBetweenSpells: 4
+  timeBetweenSpells: 6
   bigSpellEvery: 2
 --- !u!114 &1074182308036673961
 MonoBehaviour:
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: blob
-  _atk0: 3
+  _atk0: 9
   _atk1: 6
   _might: 10
   _agility: 2

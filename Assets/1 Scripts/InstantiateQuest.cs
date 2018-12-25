@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstantiateQuest : MonoBehaviour
 {
-    //did it work?
+    //hello there
     private WaypointManger wpm;
     
     public GameObject[] waypoints;

@@ -89,6 +89,8 @@ public class healthBar : MonoBehaviour
             seq.Append(center.rectTransform.DOSizeDelta(new Vector2(prct * 183.5f, center.rectTransform.sizeDelta.y), 1));
             seq.Join(right.rectTransform.DOAnchorPos(new Vector3((prct * 92) + 5.5f, 0, 0), 1));
             seq.SetEase(Ease.OutQuad);
+
+            if (prct == 0){Destroy(gameObject, 1f);}
         }
 
         previousStamina = currentStamnia;
