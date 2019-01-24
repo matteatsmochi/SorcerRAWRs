@@ -18,11 +18,13 @@ public class spellCollision : MonoBehaviour
         {
             col.gameObject.GetComponentInParent<dinoDamageManager>().TakeDamage(si.damage);
             col.gameObject.GetComponentInParent<dinoDestinationManager>().Knockback(si.knockback, kbdir);
+            Destroy(gameObject, 0.2f);
             
         } else if (col.gameObject.CompareTag("Enemy") && si.target == "Enemy")
         {
             col.gameObject.GetComponentInParent<enemyDamageManager>().TakeDamage(si.damage);
             col.gameObject.GetComponentInParent<enemyDestinationManager>().Knockback(si.knockback, kbdir);
+            Destroy(gameObject, 0.2f);
         }
         
         

@@ -15,6 +15,12 @@ public class enemyDestinationManager : MonoBehaviour
     //used when on patrol
     public bool isOnPatrol = false;
 
+    //used when knock back
+    public bool isKnockBack = false;
+    Vector3 kbDir;
+    float kbWait;
+    float kbMagnitude;
+
     
     void Awake()
     {
@@ -52,6 +58,24 @@ public class enemyDestinationManager : MonoBehaviour
         if (isAttacking)
         {
             FaceDestination();
+        }
+
+        if (isKnockBack)
+        {
+            if(kbMagnitude > 0 & kbWait < 0.2f)
+            {
+                kbWait += Time.deltaTime;
+            }
+            else if (kbMagnitude > 0 & kbWait >= 0.2f)
+            {
+                agent.Move(kbDir * Time.deltaTime * 10);
+                kbMagnitude -= Time.deltaTime;
+            }
+            else
+            {
+                isKnockBack = false;
+                ebrain.ChangeState(1);
+            }
         }
 
     }
@@ -100,30 +124,16 @@ public class enemyDestinationManager : MonoBehaviour
 
     public void Knockback(float kb, Vector3 dir)
     {
-        StartCoroutine(KBWait(kb, transform.position, dir, 0.3f));
-        
+        agent.isStopped = true;
+        kbDir = dir;
+        kbWait = 0;
+        kbMagnitude = kb / 10;
+        isKnockBack = true;
+        ebrain.ChangeState(6);
     }
 
-    IEnumerator KBWait(float kb, Vector3 start, Vector3 dir, float duration)
-    {
-        yield return new WaitForSeconds(0.2f);
-        Debug.Log(dir.ToString());
-
-        float journey = 0f;
-        while (journey <= duration)
-        {
-            journey = journey + Time.deltaTime;
-            float percent = Mathf.Clamp01(journey / duration);
-
-            dir = new Vector3(dir.x, transform.position.y, dir.z);
+    
             
-            transform.position = Vector3.Lerp(start, start + (dir * kb), percent);
-
-            //agent.Move(Vector3.Lerp(start, start + (dir * kb), percent));
-            
-            yield return null;
-        }
-            
-    }
+    
 
 }

@@ -157,6 +157,11 @@ public class enemyBrain : MonoBehaviour
                 }
                 
             break;
+
+            //isKnockBack
+            case 6:
+
+            break;
         }
     }
 

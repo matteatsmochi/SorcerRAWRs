@@ -16,6 +16,12 @@ public class dinoDestinationManager : MonoBehaviour
     //used when retreating
     public bool isRetreating = false;
 
+    //used when knock back
+    public bool isKnockBack = false;
+    Vector3 kbDir;
+    float kbWait;
+    float kbMagnitude;
+
     void Start()
     {
         //assign components
@@ -49,6 +55,24 @@ public class dinoDestinationManager : MonoBehaviour
         if (isAttacking)
         {
             FaceDestination();
+        }
+
+        if (isKnockBack)
+        {
+            if(kbMagnitude > 0 & kbWait < 0.2f)
+            {
+                kbWait += Time.deltaTime;
+            }
+            else if (kbMagnitude > 0 & kbWait >= 0.2f)
+            {
+                agent.Move(kbDir * Time.deltaTime * 10);
+                kbMagnitude -= Time.deltaTime;
+            }
+            else
+            {
+                isKnockBack = false;
+                dbrain.ChangeState(1);
+            }
         }
 
     }
@@ -118,27 +142,13 @@ public class dinoDestinationManager : MonoBehaviour
 
     public void Knockback(float kb, Vector3 dir)
     {
-        StartCoroutine(KBWait(kb, transform.position, dir, 0.3f));
+        agent.isStopped = true;
+        kbWait = 0;
+        kbDir = dir;
+        kbMagnitude = kb / 10;
+        isKnockBack = true;
+        dbrain.ChangeState(5);
     }
 
-    IEnumerator KBWait(float kb, Vector3 start, Vector3 dir, float duration)
-    {
-        yield return new WaitForSeconds(0.2f);
-
-        float journey = 0f;
-        while (journey <= duration)
-        {
-            journey = journey + Time.deltaTime;
-            float percent = Mathf.Clamp01(journey / duration);
-
-            dir = new Vector3(dir.x, transform.position.y, dir.z);
-            
-            transform.position = Vector3.Lerp(start, start + (dir * kb), percent);
-
-            //agent.Move(Vector3.Lerp(start, start + (dir * kb), percent));
-            
-            yield return null;
-        }
-            
-    }
+    
 }

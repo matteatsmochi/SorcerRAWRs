@@ -94,6 +94,11 @@ public class dinoBrain : MonoBehaviour
                     dm.NewRetreat();
                 }
             break;
+
+            //isKnockBack
+            case 5:
+
+            break;
         }
     }
 

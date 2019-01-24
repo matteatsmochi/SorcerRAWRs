@@ -5,7 +5,7 @@ using DG.Tweening;
 public class healthBar : MonoBehaviour
 {
     
-    public Image left, center, right;
+    public Image back, left, center, right;
     public Sprite r1, r2, r3, y1, y2, y3, g1, g2, g3, b1, b2, b3;
     public GameObject character;
     Vector3 removed;
@@ -15,6 +15,7 @@ public class healthBar : MonoBehaviour
     float currentStamnia;
     float fullStamnia;
     float previousStamina;
+    float firstFrame;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class healthBar : MonoBehaviour
         character = p;
         GameObject canvas = GameObject.Find("Canvas");
         gameObject.transform.SetParent(canvas.transform, false);
+        firstFrame = 0;
     }
     
     void Start()
@@ -36,6 +38,26 @@ public class healthBar : MonoBehaviour
 
     void Update()
     {
+        if (firstFrame > 0)
+        {
+            back.gameObject.SetActive(true);
+            right.gameObject.SetActive(true);
+            left.gameObject.SetActive(true);
+            center.gameObject.SetActive(true);
+            back.DOFade(0.1f, 0.5f);
+            right.DOFade(1, 0.5f);
+            back.DOFade(1, 0.5f);
+            center.DOFade(1, 0.5f);
+        }
+        else
+        {
+            back.DOFade(0, 0);
+            right.DOFade(0, 0);
+            back.DOFade(0, 0);
+            center.DOFade(0, 0);
+            firstFrame = 1;
+        }
+        
         if (character)
         {
             Vector2 screenposition = Camera.main.WorldToScreenPoint(character.transform.position);
